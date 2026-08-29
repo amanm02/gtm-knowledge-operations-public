@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gtm-brain/schemas/asset-record.schema.json",
+  "title": "GTM Brain Asset Record",
+  "description": "Defines a reusable team deliverable with complete shared-knowledge lineage.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "asset_id",
+    "team",
+    "asset_type",
+    "title",
+    "purpose",
+    "audience_ids",
+    "source_ids",
+    "evidence_ids",
+    "insight_ids",
+    "claim_ids",
+    "message_ids",
+    "content_path",
+    "status",
+    "owner_role",
+    "created_at",
+    "reviewed_at",
+    "next_review_at",
+    "sensitivity",
+    "external_use_policy",
+    "restrictions",
+    "known_gaps"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "example_notice": {
+      "type": "string",
+      "const": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY"
+    },
+    "asset_id": {
+      "type": "string",
+      "pattern": "^(src|evd|aud|ins|clm|msg|ast|rev)_[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "team": {
+      "type": "string",
+      "enum": [
+        "marketing",
+        "sales",
+        "cx",
+        "shared"
+      ]
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": [
+        "research_synthesis",
+        "messaging_foundation",
+        "evidence_register",
+        "knowledge_gap_log",
+        "content_brief",
+        "campaign_brief",
+        "positioning_brief",
+        "voice_of_customer_brief",
+        "account_research_brief",
+        "discovery_guide",
+        "objection_handling",
+        "competitive_battlecard",
+        "voice_of_customer_summary",
+        "onboarding_brief",
+        "adoption_risk_brief",
+        "renewal_expansion_brief"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audience_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^aud_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^src_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^evd_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "insight_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^ins_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "claim_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^clm_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "message_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^msg_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "content_path": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_./-]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "ready_for_review",
+        "approved_internal",
+        "approved_external",
+        "retired"
+      ]
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reviewed_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "next_review_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sensitivity": {
+      "type": "string",
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ]
+    },
+    "external_use_policy": {
+      "type": "string",
+      "enum": [
+        "external_allowed",
+        "review_required",
+        "internal_only",
+        "never_external"
+      ]
+    },
+    "restrictions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "known_gaps": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

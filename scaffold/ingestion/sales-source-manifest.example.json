@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "team": "sales",
+  "owner_role": "Sales Knowledge Steward",
+  "sources": [
+    {
+      "source_key": "crm-opportunity-notes",
+      "source_type": "crm_opportunity_notes",
+      "system_of_record": "[CRM system]",
+      "canonical_location": "[Approved opportunity-view or export location]",
+      "ingestion_mode": "scheduled_export",
+      "cadence": "daily",
+      "content_types": [
+        "application/json"
+      ],
+      "sensitivity": "confidential",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "account",
+        "audience",
+        "use_case",
+        "objection",
+        "risk"
+      ],
+      "owner_role": "Sales Knowledge Steward",
+      "expected_fields": [
+        "opportunity_id",
+        "account_segment",
+        "stage",
+        "stakeholder_role",
+        "note_summary",
+        "captured_at",
+        "owner"
+      ],
+      "notes": "Shared records must remove account-identifying details unless explicitly authorized."
+    },
+    {
+      "source_key": "sales-call-notes",
+      "source_type": "sales_call_notes",
+      "system_of_record": "[Approved call-note repository]",
+      "canonical_location": "[Curated summary location]",
+      "ingestion_mode": "curated_note",
+      "cadence": "weekly",
+      "content_types": [
+        "text/markdown"
+      ],
+      "sensitivity": "confidential",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "audience",
+        "use_case",
+        "objection",
+        "messaging",
+        "competition"
+      ],
+      "owner_role": "Sales Knowledge Steward",
+      "expected_fields": [
+        "call_date",
+        "stakeholder_role",
+        "topic",
+        "source_faithful_observation",
+        "seller_interpretation",
+        "follow_up"
+      ],
+      "notes": "Use approved summaries rather than raw recordings or transcripts in the shared layer."
+    },
+    {
+      "source_key": "objection-library",
+      "source_type": "objection_library",
+      "system_of_record": "[Sales enablement repository]",
+      "canonical_location": "[Canonical objection log]",
+      "ingestion_mode": "curated_note",
+      "cadence": "monthly",
+      "content_types": [
+        "application/json",
+        "text/markdown"
+      ],
+      "sensitivity": "internal",
+      "external_use_policy": "review_required",
+      "knowledge_domains": [
+        "audience",
+        "objection",
+        "messaging",
+        "risk"
+      ],
+      "owner_role": "Sales Knowledge Steward",
+      "expected_fields": [
+        "objection",
+        "audience",
+        "context",
+        "frequency_band",
+        "evidence_ids",
+        "approved_response_message_id",
+        "gaps"
+      ],
+      "notes": "Keep the buyer statement separate from the approved response."
+    },
+    {
+      "source_key": "win-loss-analysis",
+      "source_type": "win_loss_analysis",
+      "system_of_record": "[Win/loss research repository]",
+      "canonical_location": "[Approved synthesis location]",
+      "ingestion_mode": "scheduled_export",
+      "cadence": "monthly",
+      "content_types": [
+        "application/json",
+        "text/markdown"
+      ],
+      "sensitivity": "confidential",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "account",
+        "audience",
+        "competition",
+        "objection",
+        "risk"
+      ],
+      "owner_role": "Sales Knowledge Steward",
+      "expected_fields": [
+        "decision_context",
+        "audience",
+        "alternative",
+        "reason",
+        "evidence_location",
+        "research_date"
+      ],
+      "notes": "Do not publish account-specific findings or convert a single decision into a market claim."
+    },
+    {
+      "source_key": "competitive-intelligence",
+      "source_type": "competitive_intelligence",
+      "system_of_record": "[Competitive intelligence repository]",
+      "canonical_location": "[Canonical research location]",
+      "ingestion_mode": "curated_note",
+      "cadence": "monthly",
+      "content_types": [
+        "text/markdown"
+      ],
+      "sensitivity": "internal",
+      "external_use_policy": "review_required",
+      "knowledge_domains": [
+        "competition",
+        "category",
+        "messaging",
+        "objection"
+      ],
+      "owner_role": "Sales Knowledge Steward",
+      "expected_fields": [
+        "alternative",
+        "source_date",
+        "comparison_dimension",
+        "source_faithful_observation",
+        "confidence_level",
+        "restriction"
+      ],
+      "notes": "Separate verified public information from field reports and seller interpretation."
+    }
+  ]
+}

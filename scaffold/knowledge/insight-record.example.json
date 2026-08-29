@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "insight_id": "ins_cross-team-duplication-001",
+  "statement": "When GTM knowledge remains in team-specific workflows, teams duplicate research and adapt messages without a shared evidence or approval context.",
+  "insight_type": "audience_need",
+  "knowledge_domains": [
+    "audience",
+    "customer_evidence",
+    "messaging",
+    "risk"
+  ],
+  "audience_ids": [
+    "aud_gtm-leader-001"
+  ],
+  "evidence_ids": [
+    "evd_fragmented-research-001"
+  ],
+  "confidence_level": "medium",
+  "confidence_basis": "The illustrative evidence supports the operating problem, while implementation outcomes remain unmeasured.",
+  "status": "supported",
+  "owner_role": "GTM Knowledge Owner",
+  "reviewed_at": "2026-08-15T12:00:00Z",
+  "contradiction_notes": [],
+  "gaps": [
+    "No production baseline for duplicated research or message drift is included.",
+    "No business outcome is attributed to the proposed operating model."
+  ]
+}

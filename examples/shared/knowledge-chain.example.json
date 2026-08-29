@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "purpose": "Show one shared GTM Brain knowledge chain projected into Marketing, Sales, and CX assets.",
+  "sources": [
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "source_id": "src_marketing-voc-001",
+      "team": "marketing",
+      "source_type": "market_research",
+      "title": "Cross-team GTM knowledge fragmentation synthesis",
+      "owner_role": "Marketing Knowledge Steward",
+      "system_of_record": "[Approved research repository]",
+      "canonical_location": "[Canonical synthesis location]",
+      "captured_at": "2026-08-01T12:00:00Z",
+      "freshness_status": "current",
+      "authority_level": "trusted",
+      "sensitivity": "internal",
+      "external_use_policy": "review_required",
+      "knowledge_domains": [
+        "audience",
+        "customer_evidence",
+        "messaging",
+        "risk"
+      ],
+      "tags": [
+        "cross-team",
+        "fragmentation",
+        "knowledge-operations"
+      ],
+      "content_summary": "Illustrative synthesis describing duplicated research, inconsistent messaging, and weak cross-team reuse."
+    }
+  ],
+  "evidence": [
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "evidence_id": "evd_fragmented-research-001",
+      "source_id": "src_marketing-voc-001",
+      "statement": "Reviewed team retrospectives describe Marketing, Sales, and CX storing customer and market learning in separate workflows, leading to repeated research and inconsistent reuse.",
+      "locator": {
+        "section": "Shared findings"
+      },
+      "observed_at": "2026-08-01T12:00:00Z",
+      "status": "validated",
+      "confidence_level": "medium",
+      "confidence_basis": "The illustrative synthesis combines more than one team perspective but does not represent production research.",
+      "sensitivity": "internal",
+      "external_use_policy": "review_required",
+      "knowledge_domains": [
+        "audience",
+        "customer_evidence",
+        "messaging",
+        "risk"
+      ],
+      "owner_role": "GTM Knowledge Owner",
+      "contradicts_evidence_ids": []
+    }
+  ],
+  "audiences": [
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "audience_id": "aud_gtm-leader-001",
+      "name": "Cross-functional GTM leader",
+      "segment": "B2B go-to-market organization",
+      "role": "Leader accountable for alignment across Marketing, Sales, and CX",
+      "jobs_to_be_done": [
+        "Create one reliable view of customer, market, product, and field knowledge.",
+        "Keep team messaging and decisions aligned without erasing source ownership."
+      ],
+      "pain_points": [
+        "Teams repeat research because prior work is difficult to find or trust.",
+        "Messages drift because evidence, claims, and approved language are mixed together."
+      ],
+      "desired_outcomes": [
+        "Reuse shared knowledge across team workflows.",
+        "Trace important messages and assets to current evidence and owners."
+      ],
+      "objections": [
+        "We already have separate tools for each team.",
+        "A shared layer may become another stale repository."
+      ],
+      "success_criteria": [
+        "Each team can contribute knowledge through a common contract.",
+        "Marketing, Sales, and CX assets reference the same governed records."
+      ],
+      "evidence_ids": [
+        "evd_fragmented-research-001"
+      ],
+      "status": "approved",
+      "owner_role": "GTM Knowledge Owner",
+      "reviewed_at": "2026-08-15T12:00:00Z"
+    }
+  ],
+  "insights": [
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "insight_id": "ins_cross-team-duplication-001",
+      "statement": "When GTM knowledge remains in team-specific workflows, teams duplicate research and adapt messages without a shared evidence or approval context.",
+      "insight_type": "audience_need",
+      "knowledge_domains": [
+        "audience",
+        "customer_evidence",
+        "messaging",
+        "risk"
+      ],
+      "audience_ids": [
+        "aud_gtm-leader-001"
+      ],
+      "evidence_ids": [
+        "evd_fragmented-research-001"
+      ],
+      "confidence_level": "medium",
+      "confidence_basis": "The illustrative evidence supports the operating problem, while implementation outcomes remain unmeasured.",
+      "status": "supported",
+      "owner_role": "GTM Knowledge Owner",
+      "reviewed_at": "2026-08-15T12:00:00Z",
+      "contradiction_notes": [],
+      "gaps": [
+        "No production baseline for duplicated research or message drift is included.",
+        "No business outcome is attributed to the proposed operating model."
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "claim_id": "clm_shared-knowledge-reuse-001",
+      "statement": "A shared governed knowledge layer lets Marketing, Sales, and CX reuse the same source-linked evidence, insights, claims, and approved messages in team-specific assets.",
+      "claim_type": "process",
+      "evidence_ids": [
+        "evd_fragmented-research-001"
+      ],
+      "insight_ids": [
+        "ins_cross-team-duplication-001"
+      ],
+      "audience_ids": [
+        "aud_gtm-leader-001"
+      ],
+      "confidence_level": "medium",
+      "confidence_basis": "The claim describes the intended operating model shown by the repository; it does not claim measured adoption or business impact.",
+      "status": "supported",
+      "allowed_uses": [
+        "Explain the GTM Brain operating model.",
+        "Frame the relationship between shared knowledge and team assets."
+      ],
+      "prohibited_uses": [
+        "Do not claim measured time savings, revenue impact, adoption, or production scale.",
+        "Do not imply that the skeleton automatically ingests, generates, or publishes content."
+      ],
+      "external_use_policy": "review_required",
+      "owner_role": "GTM Knowledge Owner",
+      "reviewed_at": "2026-08-15T12:00:00Z",
+      "expires_at": "2027-02-15T12:00:00Z"
+    }
+  ],
+  "messages": [
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "message_id": "msg_shared-knowledge-reuse-001",
+      "text": "Capture customer, market, product, and field learning once, govern it as shared knowledge, and reuse it across Marketing, Sales, and CX assets.",
+      "message_type": "value_proposition",
+      "claim_ids": [
+        "clm_shared-knowledge-reuse-001"
+      ],
+      "insight_ids": [
+        "ins_cross-team-duplication-001"
+      ],
+      "audience_ids": [
+        "aud_gtm-leader-001"
+      ],
+      "use_cases": [
+        "GTM Brain overview",
+        "Cross-functional knowledge-operations explanation"
+      ],
+      "channels": [
+        "repository documentation",
+        "internal planning"
+      ],
+      "restrictions": [
+        "Do not present the skeleton as an automated or production system.",
+        "Do not add unsupported business outcomes or customer adoption claims."
+      ],
+      "status": "approved",
+      "owner_role": "GTM Knowledge Owner",
+      "reviewed_at": "2026-08-15T12:00:00Z",
+      "expires_at": "2027-02-15T12:00:00Z",
+      "supersedes_message_id": null
+    }
+  ],
+  "assets": [
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "asset_id": "ast_marketing-content-brief-001",
+      "team": "marketing",
+      "asset_type": "content_brief",
+      "title": "Shared GTM knowledge layer content brief",
+      "purpose": "Explain the shared knowledge operating model to a cross-functional GTM leader.",
+      "audience_ids": [
+        "aud_gtm-leader-001"
+      ],
+      "source_ids": [
+        "src_marketing-voc-001"
+      ],
+      "evidence_ids": [
+        "evd_fragmented-research-001"
+      ],
+      "insight_ids": [
+        "ins_cross-team-duplication-001"
+      ],
+      "claim_ids": [
+        "clm_shared-knowledge-reuse-001"
+      ],
+      "message_ids": [
+        "msg_shared-knowledge-reuse-001"
+      ],
+      "content_path": "examples/marketing/content-brief.example.md",
+      "status": "draft",
+      "owner_role": "Marketing Knowledge Steward",
+      "created_at": "2026-08-16T12:00:00Z",
+      "reviewed_at": null,
+      "next_review_at": "2026-11-14T12:00:00Z",
+      "sensitivity": "internal",
+      "external_use_policy": "review_required",
+      "restrictions": [
+        "Do not claim measured time savings, revenue impact, production scale, or automated ingestion."
+      ],
+      "known_gaps": [
+        "No production implementation or performance baseline is represented."
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "asset_id": "ast_sales-objection-handling-001",
+      "team": "sales",
+      "asset_type": "objection_handling",
+      "title": "Separate tools objection handling",
+      "purpose": "Provide a governed response when a GTM leader asks why a shared layer is needed alongside team systems.",
+      "audience_ids": [
+        "aud_gtm-leader-001"
+      ],
+      "source_ids": [
+        "src_marketing-voc-001"
+      ],
+      "evidence_ids": [
+        "evd_fragmented-research-001"
+      ],
+      "insight_ids": [
+        "ins_cross-team-duplication-001"
+      ],
+      "claim_ids": [
+        "clm_shared-knowledge-reuse-001"
+      ],
+      "message_ids": [
+        "msg_shared-knowledge-reuse-001"
+      ],
+      "content_path": "examples/sales/objection-handling.example.md",
+      "status": "draft",
+      "owner_role": "Sales Knowledge Steward",
+      "created_at": "2026-08-16T12:00:00Z",
+      "reviewed_at": null,
+      "next_review_at": "2026-11-14T12:00:00Z",
+      "sensitivity": "internal",
+      "external_use_policy": "review_required",
+      "restrictions": [
+        "Do not say that GTM Brain replaces systems of record or automatically eliminates duplicate work."
+      ],
+      "known_gaps": [
+        "No implementation-specific integration or adoption evidence is included."
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "asset_id": "ast_cx-voc-summary-001",
+      "team": "cx",
+      "asset_type": "voice_of_customer_summary",
+      "title": "Cross-team knowledge handoff signal summary",
+      "purpose": "Show how CX can use the shared chain to summarize handoff and expectation signals for all GTM teams.",
+      "audience_ids": [
+        "aud_gtm-leader-001"
+      ],
+      "source_ids": [
+        "src_marketing-voc-001"
+      ],
+      "evidence_ids": [
+        "evd_fragmented-research-001"
+      ],
+      "insight_ids": [
+        "ins_cross-team-duplication-001"
+      ],
+      "claim_ids": [
+        "clm_shared-knowledge-reuse-001"
+      ],
+      "message_ids": [
+        "msg_shared-knowledge-reuse-001"
+      ],
+      "content_path": "examples/cx/voice-of-customer-summary.example.md",
+      "status": "draft",
+      "owner_role": "CX Knowledge Steward",
+      "created_at": "2026-08-16T12:00:00Z",
+      "reviewed_at": null,
+      "next_review_at": "2026-09-15T12:00:00Z",
+      "sensitivity": "internal",
+      "external_use_policy": "review_required",
+      "restrictions": [
+        "Do not present illustrative themes as actual customer feedback or measured prevalence."
+      ],
+      "known_gaps": [
+        "No authorized customer quote, support record, onboarding note, or adoption signal is included."
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "schema_version": "1.0",
+      "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+      "review_id": "rev_message-approval-001",
+      "object_type": "message",
+      "object_id": "msg_shared-knowledge-reuse-001",
+      "decision": "approve",
+      "reviewer_role": "GTM Knowledge Owner",
+      "reviewed_at": "2026-08-15T12:00:00Z",
+      "rationale": "The message accurately describes the static operating model, retains the shared-knowledge boundary, and explicitly excludes automation and outcome claims.",
+      "resolved_gaps": [
+        "Clarified that reuse occurs through shared records and team templates."
+      ],
+      "unresolved_gaps": [
+        "No production implementation or measured business result is represented."
+      ],
+      "next_review_at": "2027-02-15T12:00:00Z"
+    }
+  ]
+}

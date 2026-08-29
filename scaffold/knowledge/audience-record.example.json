@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "audience_id": "aud_gtm-leader-001",
+  "name": "Cross-functional GTM leader",
+  "segment": "B2B go-to-market organization",
+  "role": "Leader accountable for alignment across Marketing, Sales, and CX",
+  "jobs_to_be_done": [
+    "Create one reliable view of customer, market, product, and field knowledge.",
+    "Keep team messaging and decisions aligned without erasing source ownership."
+  ],
+  "pain_points": [
+    "Teams repeat research because prior work is difficult to find or trust.",
+    "Messages drift because evidence, claims, and approved language are mixed together."
+  ],
+  "desired_outcomes": [
+    "Reuse shared knowledge across team workflows.",
+    "Trace important messages and assets to current evidence and owners."
+  ],
+  "objections": [
+    "We already have separate tools for each team.",
+    "A shared layer may become another stale repository."
+  ],
+  "success_criteria": [
+    "Each team can contribute knowledge through a common contract.",
+    "Marketing, Sales, and CX assets reference the same governed records."
+  ],
+  "evidence_ids": [
+    "evd_fragmented-research-001"
+  ],
+  "status": "approved",
+  "owner_role": "GTM Knowledge Owner",
+  "reviewed_at": "2026-08-15T12:00:00Z"
+}

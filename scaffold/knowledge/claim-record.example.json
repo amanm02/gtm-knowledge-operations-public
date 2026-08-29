@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "claim_id": "clm_shared-knowledge-reuse-001",
+  "statement": "A shared governed knowledge layer lets Marketing, Sales, and CX reuse the same source-linked evidence, insights, claims, and approved messages in team-specific assets.",
+  "claim_type": "process",
+  "evidence_ids": [
+    "evd_fragmented-research-001"
+  ],
+  "insight_ids": [
+    "ins_cross-team-duplication-001"
+  ],
+  "audience_ids": [
+    "aud_gtm-leader-001"
+  ],
+  "confidence_level": "medium",
+  "confidence_basis": "The claim describes the intended operating model shown by the repository; it does not claim measured adoption or business impact.",
+  "status": "supported",
+  "allowed_uses": [
+    "Explain the GTM Brain operating model.",
+    "Frame the relationship between shared knowledge and team assets."
+  ],
+  "prohibited_uses": [
+    "Do not claim measured time savings, revenue impact, adoption, or production scale.",
+    "Do not imply that the skeleton automatically ingests, generates, or publishes content."
+  ],
+  "external_use_policy": "review_required",
+  "owner_role": "GTM Knowledge Owner",
+  "reviewed_at": "2026-08-15T12:00:00Z",
+  "expires_at": "2027-02-15T12:00:00Z"
+}

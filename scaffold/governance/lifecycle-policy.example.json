@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "policy_name": "GTM Brain lifecycle policy",
+  "policy_owner_role": "GTM Knowledge Owner",
+  "review_windows_days": {
+    "authoritative_product_and_brand_sources": 90,
+    "market_and_competitor_sources": 60,
+    "campaign_and_content_performance": 30,
+    "sales_objections_and_win_loss": 90,
+    "cx_feedback_and_adoption_signals": 30,
+    "approved_messages": 180,
+    "competitive_battlecards": 60,
+    "other_approved_assets": 90
+  },
+  "transitions": {
+    "source": [
+      "current->stale",
+      "current->superseded",
+      "current->restricted",
+      "stale->current",
+      "stale->superseded",
+      "stale->restricted",
+      "restricted->current",
+      "restricted->superseded"
+    ],
+    "evidence": [
+      "observed->validated",
+      "observed->disputed",
+      "observed->retired",
+      "validated->disputed",
+      "validated->retired",
+      "disputed->validated",
+      "disputed->retired"
+    ],
+    "audience": [
+      "draft->approved",
+      "draft->needs_review",
+      "draft->retired",
+      "approved->needs_review",
+      "approved->retired",
+      "needs_review->approved",
+      "needs_review->retired"
+    ],
+    "insight": [
+      "proposed->supported",
+      "proposed->needs_review",
+      "proposed->retired",
+      "supported->needs_review",
+      "supported->retired",
+      "needs_review->supported",
+      "needs_review->retired"
+    ],
+    "claim": [
+      "proposed->supported",
+      "proposed->contradicted",
+      "proposed->retired",
+      "supported->contradicted",
+      "supported->retired",
+      "contradicted->supported",
+      "contradicted->retired"
+    ],
+    "message": [
+      "draft->under_review",
+      "draft->retired",
+      "under_review->approved",
+      "under_review->draft",
+      "under_review->rejected",
+      "approved->superseded",
+      "approved->retired",
+      "superseded->retired",
+      "rejected->draft",
+      "rejected->retired"
+    ],
+    "asset": [
+      "draft->ready_for_review",
+      "draft->retired",
+      "ready_for_review->draft",
+      "ready_for_review->approved_internal",
+      "ready_for_review->approved_external",
+      "ready_for_review->retired",
+      "approved_internal->draft",
+      "approved_internal->approved_external",
+      "approved_internal->retired",
+      "approved_external->draft",
+      "approved_external->retired"
+    ]
+  },
+  "terminal_states": {
+    "source": [
+      "superseded"
+    ],
+    "evidence": [
+      "retired"
+    ],
+    "audience": [
+      "retired"
+    ],
+    "insight": [
+      "retired"
+    ],
+    "claim": [
+      "retired"
+    ],
+    "message": [
+      "retired"
+    ],
+    "asset": [
+      "retired"
+    ]
+  },
+  "policy_notes": [
+    "A downstream record may become more restrictive than its dependencies, never less restrictive.",
+    "Stale or needs-review content remains available for lineage but cannot be treated as current approved guidance.",
+    "Review records remain separate from the records they evaluate."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "review_id": "rev_message-approval-001",
+  "object_type": "message",
+  "object_id": "msg_shared-knowledge-reuse-001",
+  "decision": "approve",
+  "reviewer_role": "GTM Knowledge Owner",
+  "reviewed_at": "2026-08-15T12:00:00Z",
+  "rationale": "The message accurately describes the static operating model, retains the shared-knowledge boundary, and explicitly excludes automation and outcome claims.",
+  "resolved_gaps": [
+    "Clarified that reuse occurs through shared records and team templates."
+  ],
+  "unresolved_gaps": [
+    "No production implementation or measured business result is represented."
+  ],
+  "next_review_at": "2027-02-15T12:00:00Z"
+}

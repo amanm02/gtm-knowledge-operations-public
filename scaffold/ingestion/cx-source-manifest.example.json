@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "team": "cx",
+  "owner_role": "CX Knowledge Steward",
+  "sources": [
+    {
+      "source_key": "support-themes",
+      "source_type": "support_themes",
+      "system_of_record": "[Support system or approved theme report]",
+      "canonical_location": "[Aggregated theme export location]",
+      "ingestion_mode": "scheduled_export",
+      "cadence": "weekly",
+      "content_types": [
+        "text/csv",
+        "application/json"
+      ],
+      "sensitivity": "confidential",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "customer_evidence",
+        "product",
+        "risk",
+        "adoption"
+      ],
+      "owner_role": "CX Knowledge Steward",
+      "expected_fields": [
+        "theme",
+        "period_start",
+        "period_end",
+        "case_count_band",
+        "affected_role",
+        "source_location"
+      ],
+      "notes": "Use aggregated themes; do not copy ticket text or customer identifiers into public records."
+    },
+    {
+      "source_key": "onboarding-notes",
+      "source_type": "onboarding_notes",
+      "system_of_record": "[Onboarding workspace]",
+      "canonical_location": "[Approved summary location]",
+      "ingestion_mode": "curated_note",
+      "cadence": "weekly",
+      "content_types": [
+        "text/markdown"
+      ],
+      "sensitivity": "confidential",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "onboarding",
+        "audience",
+        "use_case",
+        "risk"
+      ],
+      "owner_role": "CX Knowledge Steward",
+      "expected_fields": [
+        "customer_segment",
+        "stakeholder_role",
+        "milestone",
+        "observation",
+        "risk",
+        "captured_at"
+      ],
+      "notes": "Keep customer-specific context in the source system and share only authorized summaries."
+    },
+    {
+      "source_key": "product-adoption-signals",
+      "source_type": "product_adoption_signals",
+      "system_of_record": "[Product analytics system]",
+      "canonical_location": "[Approved aggregate report or event definition]",
+      "ingestion_mode": "event_stream",
+      "cadence": "daily",
+      "content_types": [
+        "application/json"
+      ],
+      "sensitivity": "confidential",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "adoption",
+        "product",
+        "use_case",
+        "risk",
+        "expansion"
+      ],
+      "owner_role": "CX Knowledge Steward",
+      "expected_fields": [
+        "event_name",
+        "audience",
+        "use_case",
+        "period_start",
+        "period_end",
+        "aggregate_value",
+        "interpretation_boundary"
+      ],
+      "notes": "Adoption signals are not automatically customer outcome evidence."
+    },
+    {
+      "source_key": "voice-of-customer-feedback",
+      "source_type": "voice_of_customer_feedback",
+      "system_of_record": "[Approved customer research repository]",
+      "canonical_location": "[Curated feedback synthesis location]",
+      "ingestion_mode": "curated_note",
+      "cadence": "weekly",
+      "content_types": [
+        "text/markdown",
+        "application/json"
+      ],
+      "sensitivity": "confidential",
+      "external_use_policy": "review_required",
+      "knowledge_domains": [
+        "customer_evidence",
+        "audience",
+        "messaging",
+        "product"
+      ],
+      "owner_role": "CX Knowledge Steward",
+      "expected_fields": [
+        "research_date",
+        "audience",
+        "source_type",
+        "paraphrase",
+        "permission_boundary",
+        "evidence_location"
+      ],
+      "notes": "Use paraphrases unless quotation permission is documented."
+    },
+    {
+      "source_key": "renewal-and-qbr-notes",
+      "source_type": "renewal_qbr_notes",
+      "system_of_record": "[Customer success workspace]",
+      "canonical_location": "[Approved renewal or QBR synthesis location]",
+      "ingestion_mode": "curated_note",
+      "cadence": "monthly",
+      "content_types": [
+        "text/markdown"
+      ],
+      "sensitivity": "confidential",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "renewal",
+        "expansion",
+        "adoption",
+        "risk",
+        "customer_evidence"
+      ],
+      "owner_role": "CX Knowledge Steward",
+      "expected_fields": [
+        "account_segment",
+        "stakeholder_role",
+        "outcome_summary",
+        "risk",
+        "expansion_signal",
+        "captured_at"
+      ],
+      "notes": "Do not expose account identity, commercial terms, or private customer outcomes."
+    }
+  ]
+}

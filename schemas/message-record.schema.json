@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gtm-brain/schemas/message-record.schema.json",
+  "title": "GTM Brain Message Record",
+  "description": "Defines reusable audience-specific language linked to governed knowledge.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "message_id",
+    "text",
+    "message_type",
+    "claim_ids",
+    "insight_ids",
+    "audience_ids",
+    "use_cases",
+    "channels",
+    "restrictions",
+    "status",
+    "owner_role",
+    "reviewed_at",
+    "expires_at",
+    "supersedes_message_id"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "example_notice": {
+      "type": "string",
+      "const": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY"
+    },
+    "message_id": {
+      "type": "string",
+      "pattern": "^(src|evd|aud|ins|clm|msg|ast|rev)_[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "message_type": {
+      "type": "string",
+      "enum": [
+        "value_proposition",
+        "proof_point",
+        "objection_response",
+        "positioning_statement",
+        "customer_language",
+        "call_to_action"
+      ]
+    },
+    "claim_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^clm_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "insight_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^ins_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "audience_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^aud_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "use_cases": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "channels": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "restrictions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "under_review",
+        "approved",
+        "superseded",
+        "retired",
+        "rejected"
+      ]
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "supersedes_message_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^msg_[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

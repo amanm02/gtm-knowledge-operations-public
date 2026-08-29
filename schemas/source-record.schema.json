@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gtm-brain/schemas/source-record.schema.json",
+  "title": "GTM Brain Source Record",
+  "description": "Defines provenance, ownership, freshness, sensitivity, and allowed reuse for one source.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_id",
+    "team",
+    "source_type",
+    "title",
+    "owner_role",
+    "system_of_record",
+    "canonical_location",
+    "captured_at",
+    "freshness_status",
+    "authority_level",
+    "sensitivity",
+    "external_use_policy",
+    "knowledge_domains",
+    "tags",
+    "content_summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "example_notice": {
+      "type": "string",
+      "const": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^(src|evd|aud|ins|clm|msg|ast|rev)_[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "team": {
+      "type": "string",
+      "enum": [
+        "marketing",
+        "sales",
+        "cx",
+        "shared"
+      ]
+    },
+    "source_type": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "system_of_record": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "captured_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "freshness_status": {
+      "type": "string",
+      "enum": [
+        "current",
+        "stale",
+        "superseded",
+        "restricted",
+        "unknown"
+      ]
+    },
+    "authority_level": {
+      "type": "string",
+      "enum": [
+        "authoritative",
+        "trusted",
+        "standard",
+        "limited"
+      ]
+    },
+    "sensitivity": {
+      "type": "string",
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ]
+    },
+    "external_use_policy": {
+      "type": "string",
+      "enum": [
+        "external_allowed",
+        "review_required",
+        "internal_only",
+        "never_external"
+      ]
+    },
+    "knowledge_domains": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "market",
+          "category",
+          "audience",
+          "account",
+          "product",
+          "use_case",
+          "customer_evidence",
+          "competition",
+          "messaging",
+          "objection",
+          "onboarding",
+          "adoption",
+          "renewal",
+          "expansion",
+          "risk",
+          "performance"
+        ]
+      }
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "content_summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "message_id": "msg_shared-knowledge-reuse-001",
+  "text": "Capture customer, market, product, and field learning once, govern it as shared knowledge, and reuse it across Marketing, Sales, and CX assets.",
+  "message_type": "value_proposition",
+  "claim_ids": [
+    "clm_shared-knowledge-reuse-001"
+  ],
+  "insight_ids": [
+    "ins_cross-team-duplication-001"
+  ],
+  "audience_ids": [
+    "aud_gtm-leader-001"
+  ],
+  "use_cases": [
+    "GTM Brain overview",
+    "Cross-functional knowledge-operations explanation"
+  ],
+  "channels": [
+    "repository documentation",
+    "internal planning"
+  ],
+  "restrictions": [
+    "Do not present the skeleton as an automated or production system.",
+    "Do not add unsupported business outcomes or customer adoption claims."
+  ],
+  "status": "approved",
+  "owner_role": "GTM Knowledge Owner",
+  "reviewed_at": "2026-08-15T12:00:00Z",
+  "expires_at": "2027-02-15T12:00:00Z",
+  "supersedes_message_id": null
+}

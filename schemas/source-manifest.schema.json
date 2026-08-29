@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gtm-brain/schemas/source-manifest.schema.json",
+  "title": "GTM Brain Source Manifest",
+  "description": "Defines one team's source inventory and expected capture metadata.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "team",
+    "owner_role",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "example_notice": {
+      "type": "string",
+      "const": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY"
+    },
+    "team": {
+      "type": "string",
+      "enum": [
+        "marketing",
+        "sales",
+        "cx"
+      ]
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_key",
+          "source_type",
+          "system_of_record",
+          "canonical_location",
+          "ingestion_mode",
+          "cadence",
+          "content_types",
+          "sensitivity",
+          "external_use_policy",
+          "knowledge_domains",
+          "owner_role",
+          "expected_fields",
+          "notes"
+        ],
+        "properties": {
+          "source_key": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "source_type": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]+$"
+          },
+          "system_of_record": {
+            "type": "string",
+            "minLength": 1
+          },
+          "canonical_location": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ingestion_mode": {
+            "type": "string",
+            "enum": [
+              "manual_upload",
+              "scheduled_export",
+              "api_connector",
+              "event_stream",
+              "curated_note"
+            ]
+          },
+          "cadence": {
+            "type": "string",
+            "enum": [
+              "event_driven",
+              "daily",
+              "weekly",
+              "monthly",
+              "quarterly",
+              "ad_hoc"
+            ]
+          },
+          "content_types": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z]+/[a-z0-9.+-]+$"
+            }
+          },
+          "sensitivity": {
+            "type": "string",
+            "enum": [
+              "public",
+              "internal",
+              "confidential",
+              "restricted"
+            ]
+          },
+          "external_use_policy": {
+            "type": "string",
+            "enum": [
+              "external_allowed",
+              "review_required",
+              "internal_only",
+              "never_external"
+            ]
+          },
+          "knowledge_domains": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "market",
+                "category",
+                "audience",
+                "account",
+                "product",
+                "use_case",
+                "customer_evidence",
+                "competition",
+                "messaging",
+                "objection",
+                "onboarding",
+                "adoption",
+                "renewal",
+                "expansion",
+                "risk",
+                "performance"
+              ]
+            }
+          },
+          "owner_role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected_fields": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]+$"
+            }
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gtm-brain/schemas/evidence-record.schema.json",
+  "title": "GTM Brain Evidence Record",
+  "description": "Defines one traceable source-derived observation or statement.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "source_id",
+    "statement",
+    "locator",
+    "observed_at",
+    "status",
+    "confidence_level",
+    "confidence_basis",
+    "sensitivity",
+    "external_use_policy",
+    "knowledge_domains",
+    "owner_role",
+    "contradicts_evidence_ids"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "example_notice": {
+      "type": "string",
+      "const": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY"
+    },
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^(src|evd|aud|ins|clm|msg|ast|rev)_[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^src_[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "section": {
+          "type": "string",
+          "minLength": 1
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "timestamp": {
+          "type": "string",
+          "minLength": 1
+        },
+        "row": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "record_key": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "observed",
+        "validated",
+        "disputed",
+        "retired"
+      ]
+    },
+    "confidence_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "confidence_basis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sensitivity": {
+      "type": "string",
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ]
+    },
+    "external_use_policy": {
+      "type": "string",
+      "enum": [
+        "external_allowed",
+        "review_required",
+        "internal_only",
+        "never_external"
+      ]
+    },
+    "knowledge_domains": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "market",
+          "category",
+          "audience",
+          "account",
+          "product",
+          "use_case",
+          "customer_evidence",
+          "competition",
+          "messaging",
+          "objection",
+          "onboarding",
+          "adoption",
+          "renewal",
+          "expansion",
+          "risk",
+          "performance"
+        ]
+      }
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contradicts_evidence_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^evd_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    }
+  }
+}

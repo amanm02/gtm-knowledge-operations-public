@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "evidence_id": "evd_fragmented-research-001",
+  "source_id": "src_marketing-voc-001",
+  "statement": "Reviewed team retrospectives describe Marketing, Sales, and CX storing customer and market learning in separate workflows, leading to repeated research and inconsistent reuse.",
+  "locator": {
+    "section": "Shared findings"
+  },
+  "observed_at": "2026-08-01T12:00:00Z",
+  "status": "validated",
+  "confidence_level": "medium",
+  "confidence_basis": "The illustrative synthesis combines more than one team perspective but does not represent production research.",
+  "sensitivity": "internal",
+  "external_use_policy": "review_required",
+  "knowledge_domains": [
+    "audience",
+    "customer_evidence",
+    "messaging",
+    "risk"
+  ],
+  "owner_role": "GTM Knowledge Owner",
+  "contradicts_evidence_ids": []
+}

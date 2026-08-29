@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "team": "marketing",
+  "owner_role": "Marketing Knowledge Steward",
+  "sources": [
+    {
+      "source_key": "market-research",
+      "source_type": "market_research",
+      "system_of_record": "[Market research repository]",
+      "canonical_location": "[Repository path or approved URL]",
+      "ingestion_mode": "scheduled_export",
+      "cadence": "monthly",
+      "content_types": [
+        "application/json",
+        "text/markdown"
+      ],
+      "sensitivity": "internal",
+      "external_use_policy": "review_required",
+      "knowledge_domains": [
+        "market",
+        "category",
+        "audience",
+        "competition"
+      ],
+      "owner_role": "Marketing Knowledge Steward",
+      "expected_fields": [
+        "research_question",
+        "source_date",
+        "method",
+        "finding",
+        "audience",
+        "evidence_location"
+      ],
+      "notes": "Capture source-faithful findings and method notes; do not convert analyst interpretation into approved messaging."
+    },
+    {
+      "source_key": "campaign-performance",
+      "source_type": "campaign_performance",
+      "system_of_record": "[Marketing automation or analytics system]",
+      "canonical_location": "[Saved report or export location]",
+      "ingestion_mode": "scheduled_export",
+      "cadence": "weekly",
+      "content_types": [
+        "text/csv"
+      ],
+      "sensitivity": "internal",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "performance",
+        "audience",
+        "messaging"
+      ],
+      "owner_role": "Marketing Knowledge Steward",
+      "expected_fields": [
+        "campaign_id",
+        "audience",
+        "message_id",
+        "channel",
+        "metric_name",
+        "metric_value",
+        "period_start",
+        "period_end"
+      ],
+      "notes": "Treat performance as context for message and audience learning, not proof of customer outcomes."
+    },
+    {
+      "source_key": "content-performance",
+      "source_type": "content_performance",
+      "system_of_record": "[Content analytics system]",
+      "canonical_location": "[Saved report or export location]",
+      "ingestion_mode": "scheduled_export",
+      "cadence": "weekly",
+      "content_types": [
+        "text/csv"
+      ],
+      "sensitivity": "internal",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "performance",
+        "audience",
+        "messaging"
+      ],
+      "owner_role": "Marketing Knowledge Steward",
+      "expected_fields": [
+        "content_id",
+        "asset_type",
+        "audience",
+        "message_id",
+        "metric_name",
+        "metric_value",
+        "period_start",
+        "period_end"
+      ],
+      "notes": "Preserve channel and measurement context when creating Evidence records."
+    },
+    {
+      "source_key": "brand-messaging",
+      "source_type": "brand_messaging",
+      "system_of_record": "[Approved brand and messaging repository]",
+      "canonical_location": "[Canonical document location]",
+      "ingestion_mode": "curated_note",
+      "cadence": "quarterly",
+      "content_types": [
+        "text/markdown"
+      ],
+      "sensitivity": "internal",
+      "external_use_policy": "review_required",
+      "knowledge_domains": [
+        "category",
+        "product",
+        "messaging"
+      ],
+      "owner_role": "Marketing Knowledge Steward",
+      "expected_fields": [
+        "message_id",
+        "audience",
+        "use_case",
+        "approved_text",
+        "restrictions",
+        "reviewed_at",
+        "expires_at"
+      ],
+      "notes": "Only approved language should become an approved Message record; drafts remain drafts."
+    },
+    {
+      "source_key": "web-and-conversion-signals",
+      "source_type": "web_conversion_signals",
+      "system_of_record": "[Web analytics system]",
+      "canonical_location": "[Saved report or event definition]",
+      "ingestion_mode": "event_stream",
+      "cadence": "daily",
+      "content_types": [
+        "application/json"
+      ],
+      "sensitivity": "internal",
+      "external_use_policy": "internal_only",
+      "knowledge_domains": [
+        "performance",
+        "audience",
+        "use_case",
+        "messaging"
+      ],
+      "owner_role": "Marketing Knowledge Steward",
+      "expected_fields": [
+        "event_name",
+        "content_id",
+        "audience",
+        "message_id",
+        "occurred_at",
+        "context"
+      ],
+      "notes": "Use aggregated signals in public examples; never expose identifiable visitor data."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "source_id": "src_marketing-voc-001",
+  "team": "marketing",
+  "source_type": "market_research",
+  "title": "Cross-team GTM knowledge fragmentation synthesis",
+  "owner_role": "Marketing Knowledge Steward",
+  "system_of_record": "[Approved research repository]",
+  "canonical_location": "[Canonical synthesis location]",
+  "captured_at": "2026-08-01T12:00:00Z",
+  "freshness_status": "current",
+  "authority_level": "trusted",
+  "sensitivity": "internal",
+  "external_use_policy": "review_required",
+  "knowledge_domains": [
+    "audience",
+    "customer_evidence",
+    "messaging",
+    "risk"
+  ],
+  "tags": [
+    "cross-team",
+    "fragmentation",
+    "knowledge-operations"
+  ],
+  "content_summary": "Illustrative synthesis describing duplicated research, inconsistent messaging, and weak cross-team reuse."
+}

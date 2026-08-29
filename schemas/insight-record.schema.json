@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gtm-brain/schemas/insight-record.schema.json",
+  "title": "GTM Brain Insight Record",
+  "description": "Defines an evidence-backed interpretation with visible confidence, contradictions, and gaps.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "insight_id",
+    "statement",
+    "insight_type",
+    "knowledge_domains",
+    "audience_ids",
+    "evidence_ids",
+    "confidence_level",
+    "confidence_basis",
+    "status",
+    "owner_role",
+    "reviewed_at",
+    "contradiction_notes",
+    "gaps"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "example_notice": {
+      "type": "string",
+      "const": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY"
+    },
+    "insight_id": {
+      "type": "string",
+      "pattern": "^(src|evd|aud|ins|clm|msg|ast|rev)_[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "insight_type": {
+      "type": "string",
+      "enum": [
+        "market_signal",
+        "audience_need",
+        "product_value",
+        "customer_outcome",
+        "competitive_pattern",
+        "message_performance",
+        "adoption_risk",
+        "expansion_signal"
+      ]
+    },
+    "knowledge_domains": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "market",
+          "category",
+          "audience",
+          "account",
+          "product",
+          "use_case",
+          "customer_evidence",
+          "competition",
+          "messaging",
+          "objection",
+          "onboarding",
+          "adoption",
+          "renewal",
+          "expansion",
+          "risk",
+          "performance"
+        ]
+      }
+    },
+    "audience_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^aud_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^evd_[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "confidence_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "confidence_basis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "supported",
+        "needs_review",
+        "retired"
+      ]
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "contradiction_notes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

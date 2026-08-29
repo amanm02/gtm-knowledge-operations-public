@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gtm-brain/schemas/review-record.schema.json",
+  "title": "GTM Brain Review Record",
+  "description": "Defines a separate human decision for a governed record or asset.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "review_id",
+    "object_type",
+    "object_id",
+    "decision",
+    "reviewer_role",
+    "reviewed_at",
+    "rationale",
+    "resolved_gaps",
+    "unresolved_gaps",
+    "next_review_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "example_notice": {
+      "type": "string",
+      "const": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY"
+    },
+    "review_id": {
+      "type": "string",
+      "pattern": "^(src|evd|aud|ins|clm|msg|ast|rev)_[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "object_type": {
+      "type": "string",
+      "enum": [
+        "source",
+        "evidence",
+        "audience",
+        "insight",
+        "claim",
+        "message",
+        "asset"
+      ]
+    },
+    "object_id": {
+      "type": "string",
+      "pattern": "^(src|evd|aud|ins|clm|msg|ast|rev)_[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "approve",
+        "request_changes",
+        "reject",
+        "retire"
+      ]
+    },
+    "reviewer_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resolved_gaps": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unresolved_gaps": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "next_review_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

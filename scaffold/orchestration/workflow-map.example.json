@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "example_notice": "ILLUSTRATIVE OUTPUT — PLACEHOLDER CONTENT ONLY",
+  "workflow_name": "GTM Brain knowledge operations",
+  "workflow_owner_role": "GTM Knowledge Owner",
+  "stages": [
+    {
+      "stage": "capture",
+      "purpose": "Register team-owned source material with provenance, cadence, sensitivity, and use policy.",
+      "owner_roles": [
+        "Marketing Knowledge Steward",
+        "Sales Knowledge Steward",
+        "CX Knowledge Steward"
+      ],
+      "inputs": [
+        "team source manifest",
+        "authorized source material"
+      ],
+      "outputs": [
+        "source record",
+        "initial evidence candidates"
+      ],
+      "completion_criteria": [
+        "source owner is recorded",
+        "canonical location is recorded",
+        "sensitivity and external-use policy are assigned"
+      ],
+      "blocking_conditions": [
+        "unknown ownership",
+        "missing authorization",
+        "credential or sensitive data exposure"
+      ]
+    },
+    {
+      "stage": "normalize",
+      "purpose": "Map team terminology to shared domains and audience identifiers without changing source-faithful evidence.",
+      "owner_roles": [
+        "Team Knowledge Steward"
+      ],
+      "inputs": [
+        "source record",
+        "evidence candidates",
+        "taxonomy"
+      ],
+      "outputs": [
+        "normalized tags",
+        "audience references",
+        "evidence records"
+      ],
+      "completion_criteria": [
+        "domain values use the shared taxonomy",
+        "source-faithful wording is preserved",
+        "restricted details are excluded from shared examples"
+      ],
+      "blocking_conditions": [
+        "unmapped required domain",
+        "ambiguous audience identity",
+        "policy mismatch"
+      ]
+    },
+    {
+      "stage": "structure",
+      "purpose": "Create linked Audience, Insight, Claim, and Message candidates from source-linked evidence.",
+      "owner_roles": [
+        "Team Knowledge Steward",
+        "GTM Knowledge Owner"
+      ],
+      "inputs": [
+        "evidence records",
+        "audience records",
+        "existing shared knowledge"
+      ],
+      "outputs": [
+        "audience updates",
+        "insight candidates",
+        "claim candidates",
+        "message drafts"
+      ],
+      "completion_criteria": [
+        "all candidates retain evidence references",
+        "confidence and gaps are visible",
+        "owners are assigned"
+      ],
+      "blocking_conditions": [
+        "missing evidence",
+        "unsupported interpretation presented as fact",
+        "missing owner"
+      ]
+    },
+    {
+      "stage": "reconcile",
+      "purpose": "Consolidate duplicates, preserve conflicts, and resolve cross-team vocabulary or scope differences.",
+      "owner_roles": [
+        "GTM Knowledge Owner",
+        "Team Knowledge Stewards"
+      ],
+      "inputs": [
+        "new candidates",
+        "existing records",
+        "knowledge gap log"
+      ],
+      "outputs": [
+        "merged records",
+        "linked contradictions",
+        "new or updated gaps"
+      ],
+      "completion_criteria": [
+        "duplicate decisions preserve all lineage",
+        "conflicts remain visible",
+        "shared identifiers are used where meanings match"
+      ],
+      "blocking_conditions": [
+        "unresolved ownership conflict",
+        "evidence scopes do not match",
+        "proposed merge would erase restrictions"
+      ]
+    },
+    {
+      "stage": "govern",
+      "purpose": "Review support, wording, use boundaries, freshness, and lifecycle state.",
+      "owner_roles": [
+        "Domain Owner",
+        "Reviewer",
+        "GTM Knowledge Owner"
+      ],
+      "inputs": [
+        "insights",
+        "claims",
+        "messages",
+        "review policy"
+      ],
+      "outputs": [
+        "review records",
+        "approved or changed lifecycle states",
+        "next-review dates"
+      ],
+      "completion_criteria": [
+        "decision and rationale are recorded",
+        "restrictions propagate",
+        "expiry or next-review date is present"
+      ],
+      "blocking_conditions": [
+        "contradicted claim",
+        "expired dependency",
+        "internal-only dependency for external use",
+        "missing review"
+      ]
+    },
+    {
+      "stage": "project",
+      "purpose": "Create a team-specific asset from the same governed shared records.",
+      "owner_roles": [
+        "Asset Owner"
+      ],
+      "inputs": [
+        "approved shared records",
+        "team template"
+      ],
+      "outputs": [
+        "Marketing asset",
+        "Sales asset",
+        "CX asset",
+        "asset record"
+      ],
+      "completion_criteria": [
+        "complete lineage is present",
+        "known gaps and restrictions are visible",
+        "asset owner and review date are assigned"
+      ],
+      "blocking_conditions": [
+        "unresolved references",
+        "policy incompatibility",
+        "missing audience or purpose"
+      ]
+    },
+    {
+      "stage": "learn",
+      "purpose": "Return field, campaign, and customer learning to the shared knowledge layer.",
+      "owner_roles": [
+        "Asset Owner",
+        "Team Knowledge Steward"
+      ],
+      "inputs": [
+        "asset usage feedback",
+        "new observations",
+        "changed market or product context"
+      ],
+      "outputs": [
+        "new evidence",
+        "updated insights",
+        "message review requests",
+        "knowledge gaps"
+      ],
+      "completion_criteria": [
+        "feedback is traceable to a source or usage context",
+        "affected records are identified",
+        "owner is assigned"
+      ],
+      "blocking_conditions": [
+        "customer-identifying data not authorized for reuse",
+        "unsupported outcome claim",
+        "unowned change request"
+      ]
+    }
+  ]
+}
